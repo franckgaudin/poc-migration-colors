@@ -1,0 +1,43 @@
+@import "../sass/semantic.scss";
+
+.callout {
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-start;
+  padding: 1.6rem;
+  border-radius: replace($shape-rounded-sm, shape-rounded-md);
+  box-shadow: $remove-elevation-raised;
+  background: replaceBy($neutral-surface, information-surface);
+  
+  // example for reformat the border
+  // border-left: 6px solid $information-border;
+  $_border: 0 0 0 6px;
+  border-width: replaceBy($_border, border-width);
+  border-style: solid;
+  border-color: $information-border;
+  
+
+  &__placeholder {
+    width: 3.2rem;
+    aspect-ratio: 1/1;
+    background: lightgrey;
+  }
+
+  &__content > * {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.43;
+    color: $neutral-text-weak;
+  }
+
+  &__title {
+    color: $neutral-text;
+  }
+
+  &__close {
+    width: 1.6rem;
+    aspect-ratio: 1/1;
+    background: lightgrey;
+    margin-left: auto;
+  }
+}

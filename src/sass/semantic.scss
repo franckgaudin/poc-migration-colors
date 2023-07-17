@@ -1,0 +1,30 @@
+@use 'colors' as color;
+
+@function replaceBy($value, $token) {
+  @return var(--#{$token}, #{$value} );
+}
+
+[data-brand="workleap"] {
+  --_fallback: none;
+}
+
+$neutral-surface: var(--neutral-surface, color.$samoyed);
+$neutral-text: var(--neutral-text, color.$grey-800);
+$neutral-text-weak: var(--neutral-text-weak, color.$grey-600);
+$neutral-text-strong: var(--neutral-text-strong, color.$samoyed);
+
+$primary-surface: var(--primary-surface, color.$electric-blue-500);
+$primary-surface-strong: var(--primary-surface-strong, color.$electric-blue-500);
+$primary-decorative-weak: var(--primary-decorative-weak, color.$sky-100);
+$information-surface: var(--information-surface, color.$sky-100);
+$information-border: var(--information-border, color.$sky-100);
+
+$elevation-raised: var(--elevation-raised, 0px 1px 6px 0px rgba(35, 48, 67, 0.10));
+
+$shape-rounded-sm: var(--shape-rounded-sm, 4px);
+$shape-rounded-md: var(--shape-rounded-md, 8px);
+
+$border-width: var(--border-width, 1px);
+
+// fallback for removing properties
+$remove-elevation-raised: var(--_fallback, 0px 1px 6px 0px rgba(35, 48, 67, 0.10));

@@ -1,0 +1,31 @@
+{
+  "name": "poc-ov-to-workleap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "source": "src/index.html",
+  "scripts": {
+    "clean": "pnpm dlx rimraf dist",
+    "copy": "cp src/tokens.css dist/tokens.css",
+    "dev": "parcel"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.9.3",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@workleap/typescript-configs": "^2.3.2",
+    "add": "^2.0.6",
+    "clsx": "^1.2.1",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10",
+    "react-aria-components": "1.0.0-alpha.5",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
